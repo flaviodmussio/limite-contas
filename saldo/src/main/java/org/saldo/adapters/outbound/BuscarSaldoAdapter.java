@@ -23,7 +23,7 @@ public class BuscarSaldoAdapter implements BuscarSaldoPort {
 
     @Override
     @Transactional
-    public Saldo buscarSaldo(Long id_conta) {
+    public SaldoEntity buscarSaldo(Long id_conta) {
         return saldoToSaldoOptionalEntityMapper.mapper(saldoRepository.findById(id_conta));
     }
 }

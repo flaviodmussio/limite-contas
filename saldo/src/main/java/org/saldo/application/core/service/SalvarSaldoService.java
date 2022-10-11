@@ -1,5 +1,6 @@
 package org.saldo.application.core.service;
 
+import org.saldo.adapters.inbound.entity.SaldoEntity;
 import org.saldo.application.core.domain.Saldo;
 import org.saldo.application.ports.in.SalvarSaldoServicePort;
 import org.saldo.application.ports.out.BuscarSaldoPort;
@@ -23,7 +24,7 @@ public class SalvarSaldoService implements SalvarSaldoServicePort {
     @Override
     public Saldo salvarSaldo(Saldo saldo) {
 
-        Saldo saldoBusca = buscarSaldoPort.buscarSaldo(saldo.getId_conta());
+        SaldoEntity saldoBusca = buscarSaldoPort.buscarSaldo(saldo.getId_conta());
         saldo.setSaldo(saldo.getValor_movimento().add(Optional.ofNullable(saldoBusca.getSaldo()).orElse(new BigDecimal(0.00))));
         return salvarSaldoPort.salvarSaldo(saldo);
     }

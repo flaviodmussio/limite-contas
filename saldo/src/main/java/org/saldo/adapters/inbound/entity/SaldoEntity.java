@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 @Entity
 @Getter
 @Setter
-public class SaldoEntity extends Saldo {
+public class SaldoEntity {
     @Id
     @Column(name = "id_conta", nullable = false)
     private Long id_conta;
