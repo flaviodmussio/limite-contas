@@ -16,20 +16,20 @@ import java.math.BigDecimal;
 @Setter
 public class SaldoEntity {
     @Id
-    @Column(name = "id_conta", nullable = false)
-    private Long id_conta;
+    @Column(name = "contaId", nullable = false)
+    private Long contaId;
 
     @Column(name = "agencia", nullable = false)
     private String agencia;
 
-    @Column(name = "numero_conta", nullable = false)
-    private String numero_conta;
+    @Column(name = "numeroConta", nullable = false)
+    private String numeroConta;
 
-    @Column(name = "digito_conta", nullable = false)
-    private String digito_conta;
+    @Column(name = "digitoConta", nullable = false)
+    private String digitoConta;
 
-    @Column(name = "valor_movimento", nullable = false)
-    private BigDecimal valor_movimento;
+    @Column(name = "valorMovimento", nullable = false)
+    private BigDecimal valorMovimento;
 
     @Column(name = "saldo", nullable = false)
     private BigDecimal saldo;

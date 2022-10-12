@@ -12,10 +12,10 @@ public class Movimentacao {
 
     private String agencia;
 
-    private String numero_conta;
+    private String numeroConta;
 
-    private String digito_conta;
+    private String digitoConta;
 
-    private BigDecimal valor_movimento;
+    private BigDecimal valorMovimento;
 
 }

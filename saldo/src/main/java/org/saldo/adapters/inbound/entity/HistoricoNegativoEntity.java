@@ -18,16 +18,16 @@ public class HistoricoNegativoEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "id_conta", nullable = false)
-    private Long id_conta;
+    @Column(name = "contaId", nullable = false)
+    private Long contaId;
 
-    @Column(name = "valor_movimento", nullable = false)
-    private BigDecimal valor_movimento;
+    @Column(name = "valorMovimento", nullable = false)
+    private BigDecimal valorMovimento;
 
     @Column(name = "saldo", nullable = false)
     private BigDecimal saldo;
 
-    @Column(name = "data_hora_insercao", nullable = false)
+    @Column(name = "dataHoraInsercao", nullable = false)
     @CreationTimestamp
-    private Date data_hora_insercao;
+    private Date dataHoraInsercao;
 }

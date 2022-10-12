@@ -24,8 +24,8 @@ public class SalvarSaldoService implements SalvarSaldoServicePort {
     @Override
     public Saldo salvarSaldo(Saldo saldo) {
 
-        SaldoEntity saldoBusca = buscarSaldoPort.buscarSaldo(saldo.getId_conta());
-        saldo.setSaldo(saldo.getValor_movimento().add(Optional.ofNullable(saldoBusca.getSaldo()).orElse(new BigDecimal(0.00))));
+        SaldoEntity saldoBusca = buscarSaldoPort.buscarSaldo(saldo.getContaId());
+        saldo.setSaldo(saldo.getValorMovimento().add(Optional.ofNullable(saldoBusca.getSaldo()).orElse(new BigDecimal(0.00))));
         Saldo saldoSalvo = salvarSaldoPort.salvarSaldo(saldo);
         return saldoSalvo;
     }

@@ -13,7 +13,7 @@ public class SaldoSqsToSaldoMapper {
         Gson g = new Gson();
         var saldo = new Saldo();
         BeanUtils.copyProperties(g.fromJson(saldoSqs,Movimentacao.class), saldo);
-        saldo.setId_conta(Long.parseLong(saldo.getAgencia().concat(saldo.getNumero_conta()).concat(saldo.getDigito_conta())));
+        saldo.setContaId(Long.parseLong(saldo.getAgencia().concat(saldo.getNumeroConta()).concat(saldo.getDigitoConta())));
         return saldo;
     }
 }

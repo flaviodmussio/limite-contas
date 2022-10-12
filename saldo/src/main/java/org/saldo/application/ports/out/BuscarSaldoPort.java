@@ -5,5 +5,5 @@ import org.saldo.application.core.domain.Saldo;
 
 public interface BuscarSaldoPort {
 
-    SaldoEntity buscarSaldo(Long id_conta);
+    SaldoEntity buscarSaldo(Long contaId);
 }
