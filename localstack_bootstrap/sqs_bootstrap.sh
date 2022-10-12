@@ -20,7 +20,7 @@ create_topic() {
 }
 send_message() {
     local QUEUE_NAME_TO_CREATE=$1
-    awslocal --endpoint-url=http://${LOCALSTACK_HOST}:4566 sqs send-message --queue-url http://${LOCALSTACK_HOST}:4576/queue/${QUEUE_NAME_TO_CREATE} --region ${AWS_REGION} --message-body '{"agencia":"002","numero_conta":"11111","digito_conta":"2","valor_movimento":1000.20}'
+    awslocal --endpoint-url=http://${LOCALSTACK_HOST}:4566 sqs send-message --queue-url http://${LOCALSTACK_HOST}:4576/queue/${QUEUE_NAME_TO_CREATE} --region ${AWS_REGION} --message-body '{"agencia":"002","numero_conta":"11111","digito_conta":"2","valor_movimento":-10000.20}'
 }
 
 create_queue "movimentacoes_conta"
