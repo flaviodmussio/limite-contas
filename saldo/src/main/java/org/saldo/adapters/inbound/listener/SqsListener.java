@@ -15,7 +15,7 @@ public class SqsListener {
 
     private final SalvarSaldoServicePort salvarSaldoServicePort;
 
-        private final SaldoSqsToSaldoMapper saldoRequestToSaldoMapper;
+    private final SaldoSqsToSaldoMapper saldoRequestToSaldoMapper;
 
 
     @io.awspring.cloud.messaging.listener.annotation.SqsListener(value = "${cloud.aws.queue.name}", deletionPolicy = SqsMessageDeletionPolicy.ON_SUCCESS)

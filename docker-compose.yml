@@ -17,7 +17,6 @@ services:
       - "${TMPDIR:-/tmp/localstack}:/tmp/localstack"
       - "/var/run/docker.sock:/var/run/docker.sock"
       - ./localstack_bootstrap:/docker-entrypoint-initaws.d/
-      - ./localstack_bootstrap/send-message.json:/send-message.json
   postgres:
     image: postgres:10
     container_name: postgres
