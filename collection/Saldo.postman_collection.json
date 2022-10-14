@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "acafc671-3704-497b-b025-b4b6071b6833",
+		"name": "Saldo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "saldo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{token}}",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:8083/api/contas/111112/saldos",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"contas",
+						"111112",
+						"saldos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "historico",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "{{token}}",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:8083/api/contas/111112/saldos",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"contas",
+						"111112",
+						"saldos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
