@@ -15,10 +15,7 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
           cache: maven
-
-      - name: saldo
-        run: cd saldo
-
+          
       - name: run tests
         run: mvn clean test 
 
