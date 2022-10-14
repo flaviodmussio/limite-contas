@@ -16,6 +16,9 @@ jobs:
           distribution: 'adopt'
           cache: maven
 
+      - name: listar
+        run: ls 
+
       - name: run tests
         run: mvn clean test 
 
